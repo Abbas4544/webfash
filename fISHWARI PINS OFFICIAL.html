@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fishwari Pin - Mobile Friendly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">
+  <style>
+    /* Basic Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    html {scroll-behavior: smooth;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #1e293b, #334155);
+      padding: 20px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #38bdf8;
+    }
+    header .contact {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #facc15;
+      text-shadow: 0 0 8px #facc15;
+    }
+
+    /* Top Images Section */
+    .top-images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 15px;
+    }
+    .top-images .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #334155; /* Placeholder color if image not uploaded */
+      height: 200px;
+    }
+    .top-images .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .top-images .image-container .text-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-shadow: 0 0 8px #000000;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 15px 40px;
+      text-align: center;
+      background: linear-gradient(180deg, #1e293b, #0f172a);
+    }
+    .hero h2 {
+      font-size: 3rem;
+      color: #facc15;
+      text-shadow: 0 0 15px #facc15, 0 0 30px #fbbf24;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 600px;
+      margin: auto;
+      color: #a5f3fc;
+    }
+
+    /* SUPPORT'S IN Section */
+    .support-section {
+      text-align: center;
+      padding: 60px 15px;
+    }
+    .support-section h2 {
+      font-size: 2.8rem;
+      color: #22d3ee;
+      text-shadow: 0 0 15px #22d3ee, 0 0 40px #06b6d4;
+      margin-bottom: 40px;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      0% {text-shadow: 0 0 5px #22d3ee, 0 0 15px #06b6d4;}
+      100% {text-shadow: 0 0 20px #22d3ee, 0 0 50px #06b6d4;}
+    }
+
+    .app-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+    .app-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 350px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    .app-item img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+    .app-item p {
+      font-size: 1.2rem;
+      color: #f1f5f9;
+      text-align: center;
+    }
+
+    /* Other Sections */
+    section {
+      padding: 100px 15px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #34d399;
+      font-weight: 800;
+      text-shadow: 0 0 8px #34d399;
+    }
+    section p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    .highlight {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #22d3ee;
+      text-shadow: 0 0 10px #22d3ee, 0 0 20px #06b6d4;
+      margin: 40px 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 15px;
+      background: #111827;
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
+
+    /* Mobile First */
+    @media(min-width: 600px){
+      .app-item {
+        flex-direction: row;
+        gap: 15px;
+      }
+      .app-item img {
+        margin-bottom: 0;
+      }
+      .top-images {
+        flex-direction: row;
+        gap: 15px;
+      }
+      .top-images .image-container {
+        flex: 1;
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fishwari Pin</h1>
+    <div class="contact">📞 0564269388</div>
+  </header>
+
+  <!-- Top Images -->
+  <div class="top-images">
+    <div class="image-container">
+      <img src="image1.png" alt="Our Location">
+      <div class="text-overlay">Our Location</div>
+    </div>
+    <div class="image-container">
+      <img src="image2.png" alt="Our Shop">
+      <div class="text-overlay">Our Shop</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h2>Better Than All</h2>
+    <p>
+      Fishwari Shop, located in Satwa, has all types of company pins.  
+      We are unique because of our exceptional customer service — completing orders in less than an hour!
+    </p>
+  </div>
+
+  <!-- SUPPORT'S IN Section -->
+  <div class="support-section">
+    <h2>SUPPORT'S IN</h2>
+    <div class="app-list">
+      <div class="app-item">
+        <img src="logo1.png" alt="GPS Setter Logo">
+        <p>Gps setter (root mobile)</p>
+      </div>
+      <div class="app-item">
+        <img src="logo2.png" alt="Justic Map Logo">
+        <p>Justic map (need unlock security of phone)</p>
+      </div>
+      <div class="app-item">
+        <img src="logo3.png" alt="Pro Careem Logo">
+        <p>Pro careem app (no need any root)</p>
+      </div>
+      <div class="app-item">
+        <img src="logo4.png" alt="Pro Talabat Logo">
+        <p>Pro talabat app (no need any root)</p>
+      </div>
+      <div class="app-item">
+        <img src="logo5.png" alt="GPS Deliveroo Logo">
+        <p>Gps for delivero (patch without root)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Original Sections -->
+  <section>
+    <h2>About Our Shop</h2>
+    <p><strong>Satwa Careem Pin Shop</strong> is the fastest and most reliable place for all types of company pins. Customers love our unique service because no matter the order size, we complete it in under an hour!</p>
+    <p>Our pins are made with precision, quality, and a focus on customer satisfaction. We provide professional-grade pins suitable for corporate use, events, and personal collections.</p>
+    <div class="highlight">BETTER THAN ALL</div>
+  </section>
+
+  <section>
+    <h2>Why Choose Fishwari?</h2>
+    <p>• Fastest service in Satwa — orders ready in less than 1 hour.</p>
+    <p>• Wide range of company pins for every requirement.</p>
+    <p>• Excellent customer service, trusted by hundreds of clients.</p>
+    <p>• Affordable prices without compromising on quality.</p>
+    <p>• Reputation for being <strong>Better Than All</strong>.</p>
+  </section>
+
+  <section>
+    <h2>Our Mission</h2>
+    <p>We aim to be the most customer-focused and fastest pin shop in the UAE. Every pin represents pride, professionalism, and identity.</p>
+    <p>Whether for companies, schools, or personal use, Fishwari ensures perfection, speed, and satisfaction in every order.</p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>If you want the best pin service in Satwa, call us now.</p>
+    <div class="highlight">📞 0564269388</div>
+  </section>
+
+  <footer>
+    © 2025 Fishwari Pin — Satwa Careem Pin Shop. All rights reserved.
+  </footer>
+
+</body>
+</html>
